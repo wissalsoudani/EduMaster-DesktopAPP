@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="832.0" prefWidth="1210.0" style="-fx-background-color: ECE8DB;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.EduMasController">
+   <children>
+      <VBox layoutX="4.0" layoutY="5.0" prefHeight="568.0" prefWidth="118.0" spacing="150.0">
+         <children>
+            <Label text="NOM_COURS" textFill="#4d4c9a">
+               <font>
+                  <Font name="Bauhaus 93" size="19.0" />
+               </font></Label>
+            <Label text="CONTENU" textFill="#4d4c9a">
+               <font>
+                  <Font name="Bauhaus 93" size="19.0" />
+               </font></Label>
+            <Label text="NB_PAGES" textFill="#4d4c9a">
+               <font>
+                  <Font name="Bauhaus 93" size="19.0" />
+               </font></Label>
+            <Label text="CHAPITRES" textFill="#4d4c9a">
+               <font>
+                  <Font name="Bauhaus 93" size="19.0" />
+               </font></Label>
+         </children>
+      </VBox>
+      <VBox layoutX="219.0" layoutY="5.0" prefHeight="568.0" prefWidth="231.0" spacing="140.0">
+         <children>
+            <TextField fx:id="tfNOM" prefHeight="32.0" prefWidth="239.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></TextField>
+            <TextField fx:id="tfCONTENU" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="239.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></TextField>
+            <TextField fx:id="tfPAGES" layoutX="10.0" layoutY="292.0" prefHeight="32.0" prefWidth="239.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></TextField>
+            <TextField fx:id="tfCHAPITRES" layoutX="10.0" layoutY="574.0" prefHeight="32.0" prefWidth="239.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></TextField>
+         </children>
+      </VBox>
+      <Button fx:id="btnajouter" layoutX="261.0" layoutY="604.0" mnemonicParsing="false" onAction="#AjouterCours" style="-fx-background-color: cyan; -fx-background-radius: 90;" text="AJOUTER">
+         <font>
+            <Font name="Bauhaus 93" size="20.0" />
+         </font></Button>
+      <Button fx:id="btnmodifier" layoutX="254.0" layoutY="666.0" mnemonicParsing="false" onAction="#ModifierCours" onMouseClicked="#getSelected" style="-fx-background-color: pink; -fx-background-radius: 90;" text="MODIFIER">
+         <font>
+            <Font name="Bauhaus 93" size="20.0" />
+         </font></Button>
+      <Button fx:id="btnsupprimer" layoutX="1079.0" layoutY="736.0" mnemonicParsing="false" onAction="#SupprimerCours" style="-fx-background-color: grey;" text="SUPPRIMER" textFill="#f2eded">
+         <font>
+            <Font name="Bauhaus 93" size="20.0" />
+         </font></Button>
+      <ListView fx:id="lid" layoutX="467.0" layoutY="5.0" prefHeight="551.0" prefWidth="729.0" style="-fx-background-color: 6a938b; -fx-background-radius: 20;" />
+      <Label fx:id="myLabel" layoutX="749.0" layoutY="701.0" prefHeight="28.0" prefWidth="118.0" text="Label" textFill="#ae4e4e">
+         <font>
+            <Font name="Brush Script MT Italic" size="20.0" />
+         </font></Label>
+      <DatePicker fx:id="myDatePicker" layoutX="773.0" layoutY="573.0" onAction="#getDate" prefHeight="21.0" prefWidth="118.0" promptText="Date" style="-fx-background-color: grey;" />
+      <Button fx:id="btntelecharger" layoutX="107.0" layoutY="173.0" mnemonicParsing="false" style="-fx-background-color: blue; -fx-background-radius: 90;" text="BROWSE" textFill="#5daec9">
+         <font>
+            <Font name="Andalus" size="17.0" />
+         </font>
+      </Button>
+      <Label fx:id="label1" layoutX="475.0" layoutY="704.0" prefHeight="21.0" prefWidth="285.0" text="Label" textFill="#112243">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font></Label>
+      <Button fx:id="btnvisit" layoutX="1077.0" layoutY="787.0" mnemonicParsing="false" onAction="#VisiterCours" style="-fx-background-color: dab894;" text="Visiter les cours">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnvideo" layoutX="1079.0" layoutY="685.0" mnemonicParsing="false" onAction="#AccederAjout" prefHeight="38.0" prefWidth="127.0" style="-fx-background-color: f9efc7;" text="Ajouter Video">
+         <font>
+            <Font name="Bauhaus 93" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnmodifier1" layoutX="51.0" layoutY="766.0" mnemonicParsing="false" onAction="#Quitter" onMouseClicked="#getSelected" style="-fx-background-color: pink; -fx-background-radius: 90;" text="Quitter">
+         <font>
+            <Font name="Bauhaus 93" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

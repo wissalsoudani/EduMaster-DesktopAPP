@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="775.0" prefWidth="1132.0" style="-fx-background-color: #598ba4; -fx-background-radius: 90;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CoursUti2Controller">
+   <children>
+      <Button fx:id="btnback" layoutX="14.0" layoutY="723.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: dab894; -fx-background-radius: 90;" text="&lt; Cours">
+         <font>
+            <Font name="Bauhaus 93" size="21.0" />
+         </font></Button>
+      <ComboBox fx:id="combo" editable="true" layoutX="63.0" layoutY="22.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#affichercour" prefHeight="31.0" prefWidth="204.0" promptText="CHOISISSEZ LE COURS" style="-fx-background-color: #1c502a; -fx-background-radius: 500;" visibleRowCount="5">
+         <opaqueInsets>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </opaqueInsets>
+        
+         <effect>
+            <DropShadow />
+         </effect></ComboBox>
+      <Button fx:id="Calcul" layoutX="957.0" layoutY="19.0" mnemonicParsing="false" onAction="#Calculer" style="-fx-background-color: grey; -fx-background-radius: 90;" text="CALCULATRICE">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+      </Button>
+      <StackPane layoutX="20.0" layoutY="111.0" prefHeight="601.0" prefWidth="1073.0">
+         <children>
+            <ImageView fx:id="cour_image" fitHeight="560.0" fitWidth="1030.0" pickOnBounds="true" />
+         </children>
+      </StackPane>
+      <ImageView fitHeight="38.0" fitWidth="43.0" layoutX="6.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Media/272251763_308732534639489_88486369265942643_n.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="775.0" scaleShape="false" style="-fx-background-color: #DCD3FF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.GestionHistoire_AdminController">
+   <children>
+      <VBox layoutX="1.0" layoutY="117.0" prefHeight="254.0" prefWidth="88.0" spacing="20.0" />
+      <VBox layoutX="75.0" layoutY="117.0" prefHeight="283.0" prefWidth="144.0" spacing="10.0" />
+      <ImageView fitHeight="43.0" fitWidth="88.0" layoutX="1.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/couverture/Logo-edumaster.png" />
+         </image>
+      </ImageView>
+      <TabPane layoutY="39.0" prefHeight="450.0" prefWidth="767.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Histoire">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="697.0">
+                     <children>
+                        <Label layoutX="12.0" layoutY="81.0" text="Age" textFill="#1a0e57">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="12.0" layoutY="115.0" text="Langue" textFill="#1a0e57">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="10.0" layoutY="44.0" text="Nom_histoire" textFill="#1a0e57">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="15.0" layoutY="186.0" text="Contenu" textFill="#1a0e57">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="9.0" layoutY="255.0" text="Couverture" textFill="#1a0e57">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="12.0" layoutY="149.0" text="Catégorie" textFill="#1a0e57">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font></Label>
+                        <TextField fx:id="L_age" layoutX="95.0" layoutY="77.0" />
+                        <TextField fx:id="L_langue" layoutX="95.0" layoutY="111.0" />
+                        <TextField fx:id="L_nom" layoutX="95.0" layoutY="40.0" />
+                        <TextField fx:id="L_contenu" layoutX="92.0" layoutY="211.0" prefHeight="25.0" prefWidth="155.0" />
+                        <Button fx:id="importContenu" layoutX="89.0" layoutY="182.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="70.0" style="-fx-background-color: grey; -fx-background-radius: 90;" text="select" textFill="#37e499">
+                           <font>
+                              <Font name="Bodoni MT Bold" size="15.0" />
+                           </font></Button>
+                        <TextField fx:id="L_couverture" layoutX="95.0" layoutY="284.0" />
+                        <TextField fx:id="L_catégorie" layoutX="95.0" layoutY="145.0" />
+                        <Button layoutX="41.0" layoutY="351.0" mnemonicParsing="false" onAction="#ajouterHistoire" prefHeight="28.0" prefWidth="70.0" style="-fx-background-color: grey; -fx-background-radius: 90;" text="ajouter" textFill="#37e499">
+                           <font>
+                              <Font name="Bodoni MT Bold" size="15.0" />
+                           </font></Button>
+                        <Button layoutX="124.0" layoutY="351.0" mnemonicParsing="false" onAction="#modifierHistoire" style="-fx-background-color: grey; -fx-background-radius: 90;" text="modifier" textFill="#37e499">
+                           <font>
+                              <Font name="Bodoni MT Bold" size="15.0" />
+                           </font></Button>
+                        <ListView fx:id="L_afficher" layoutX="251.0" layoutY="51.0" onMousePressed="#index" prefHeight="304.0" prefWidth="516.0" />
+                        <Button layoutX="551.0" layoutY="363.0" mnemonicParsing="false" onAction="#afficherHistoire" style="-fx-background-color: grey; -fx-background-radius: 90;" text="afficher" textFill="#37e499">
+                           <font>
+                              <Font name="Bodoni MT Bold" size="15.0" />
+                           </font></Button>
+                        <Label alignment="BASELINE_LEFT" graphicTextGap="5.0" layoutX="384.0" layoutY="14.0" prefHeight="35.0" prefWidth="301.0" text="Liste des Histoires" textFill="#f893a6">
+                           <font>
+                              <Font name="Bauhaus 93" size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="B_supp" layoutX="463.0" layoutY="363.0" mnemonicParsing="false" onAction="#supprimerHistoire" style="-fx-background-color: grey; -fx-background-radius: 90;" text="supprimer" textFill="#37e499">
+                           <font>
+                              <Font name="Bodoni MT Bold" size="15.0" />
+                           </font></Button>
+                        <Button fx:id="backretour" layoutX="620.0" layoutY="363.0" mnemonicParsing="false" onMouseClicked="#AllerHome" style="-fx-background-color: grey; -fx-background-radius: 90;" text="Quitter" textFill="#37e499">
+                           <font>
+                              <Font name="Bodoni MT Bold" size="15.0" />
+                           </font></Button>
+                        <Button fx:id="importcouverture" layoutX="89.0" layoutY="251.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: grey; -fx-background-radius: 90;" text="select" textFill="#37e499">
+                           <font>
+                              <Font name="Bodoni MT Bold" size="15.0" />
+                           </font></Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Test_Histoire">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="histoire_a_choisir" layoutX="112.0" layoutY="10.0" prefWidth="150.0" promptText="CHOIX" />
+                        <Button fx:id="ajoutertest" layoutX="454.0" layoutY="375.0" mnemonicParsing="false" onAction="#ajouterTestHistoire" style="-fx-background-color: #ffc09f; -fx-background-radius: 90;" text="Ajouter" textFill="#464357" />
+                        <Label layoutY="4.0" text="Choisir l'histoire " textFill="#9e5023">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="17.0" />
+                           </font></Label>
+                        <Label layoutX="14.0" layoutY="55.0" text="Question1" textFill="#a7bed3">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font></Label>
+                        <TextField fx:id="L_Q1" layoutX="78.0" layoutY="51.0" prefHeight="25.0" prefWidth="258.0" style="-fx-background-color: grey;" />
+                        <Label layoutX="6.0" layoutY="89.0" text="choix1" textFill="#ff7b89">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font></Label>
+                        <TextField fx:id="L_C1Q1" layoutX="44.0" layoutY="85.0" prefHeight="25.0" prefWidth="178.0" />
+                        <TextField fx:id="L_C2Q1" layoutX="44.0" layoutY="110.0" prefHeight="25.0" prefWidth="178.0" />
+                        <TextField fx:id="L_C3Q1" layoutX="44.0" layoutY="135.0" prefHeight="25.0" prefWidth="178.0" />
+                        <Label layoutX="6.0" layoutY="114.0" text="choix2" textFill="#ff7b89">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="6.0" layoutY="139.0" text="choix3" textFill="#ff7b89">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="18.0" layoutY="181.0" text="Question2" textFill="#a7bed3">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="7.0" layoutY="215.0" text="choix1" textFill="#ff7b89">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="7.0" layoutY="241.0" text="choix2" textFill="#ff7b89">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="7.0" layoutY="268.0" text="choix3" textFill="#ff7b89">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font></Label>
+                        <TextField fx:id="L_C1Q2" layoutX="48.0" layoutY="211.0" prefHeight="25.0" prefWidth="178.0" />
+                        <TextField fx:id="L_C3Q2" layoutX="48.0" layoutY="264.0" prefHeight="25.0" prefWidth="178.0" />
+                        <TextField fx:id="L_C2Q2" layoutX="48.0" layoutY="237.0" prefHeight="25.0" prefWidth="178.0" />
+                        <TextField fx:id="L_Q2" layoutX="91.0" layoutY="177.0" prefHeight="25.0" prefWidth="252.0" style="-fx-background-color: grey;" />
+                        <Label layoutX="20.0" layoutY="308.0" text="Question3" textFill="#a7bed3">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="7.0" layoutY="342.0" text="choix1" textFill="#ff7b89">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="7.0" layoutY="365.0" text="choix2" textFill="#ff7b89">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="8.0" layoutY="391.0" text="choix3" textFill="#ff7b89">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font></Label>
+                        <TextField fx:id="L_Q3" layoutX="91.0" layoutY="304.0" prefHeight="25.0" prefWidth="263.0" style="-fx-background-color: grey;" />
+                        <TextField fx:id="L_C1Q3" layoutX="47.0" layoutY="338.0" prefHeight="25.0" prefWidth="180.0" />
+                        <TextField fx:id="L_C2Q3" layoutX="47.0" layoutY="363.0" prefHeight="25.0" prefWidth="179.0" />
+                        <TextField fx:id="L_C3Q3" layoutX="46.0" layoutY="389.0" prefHeight="25.0" prefWidth="180.0" />
+                        <ListView fx:id="L_affichertest" layoutX="343.0" layoutY="48.0" onMousePressed="#indexTest" prefHeight="316.0" prefWidth="419.0" />
+                        <Button fx:id="modifierTest" layoutX="606.0" layoutY="375.0" mnemonicParsing="false" onAction="#modifierTestHistoire" style="-fx-background-color: #ffc09f; -fx-background-radius: 90;" text="modifier" textFill="#464357" />
+                        <Button fx:id="afficherTest" layoutX="677.0" layoutY="375.0" mnemonicParsing="false" onAction="#afficherTestHistoire" prefHeight="26.0" prefWidth="56.0" style="-fx-background-color: #ffc09f; -fx-background-radius: 90;" text="afficher" textFill="#464357" />
+                        <Button fx:id="supprimerTest" layoutX="518.0" layoutY="375.0" mnemonicParsing="false" onAction="#supprimerTestHistoire" style="-fx-background-color: #ffc09f; -fx-background-radius: 90;" text="supprimer" textFill="#464357" />
+                        <Label layoutX="248.0" layoutY="102.0" text="correctionQ1">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font></Label>
+                        <TextField fx:id="C1" layoutX="236.0" layoutY="119.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #FFBE88;" />
+                        <TextField fx:id="C2" layoutX="242.0" layoutY="249.0" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #FFBE88;" />
+                        <Label layoutX="256.0" layoutY="229.0" text="correctionQ2">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="255.0" layoutY="355.0" text="correctionQ3">
+                           <font>
+                              <Font name="Bauhaus 93" size="12.0" />
+                           </font></Label>
+                        <TextField fx:id="C3" layoutX="243.0" layoutY="373.0" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #FFBE88;" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+   <effect>
+      <ColorAdjust />
+   </effect>
+</Pane>

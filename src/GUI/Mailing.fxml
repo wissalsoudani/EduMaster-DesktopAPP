@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.MailingController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="20.0" layoutY="20.0" prefHeight="532.8" prefWidth="630.4" style="-fx-background-color: #4E85DD;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="115.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="148.0" fitWidth="200.0" layoutY="14.0">
+                     <image>
+                        <Image url="@assests/couverture/Logo-edumaster.png" />
+                     </image>
+                     <effect>
+                        <DropShadow spread="0.39">
+                           <color>
+                              <Color red="0.09005848318338394" green="0.21914230287075043" blue="0.4421052634716034" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="246.0" layoutY="26.0" prefHeight="358.0" prefWidth="326.0" style="-fx-background-color: #FCFCFC; -fx-background-radius: 20px;">
+               <effect>
+                  <DropShadow spread="0.38">
+                     <color>
+                        <Color red="0.25789472460746765" green="0.26508772373199463" blue="0.4736842215061188" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Button fx:id="mail" layoutX="189.0" layoutY="107.0" mnemonicParsing="false" onAction="#envoyezMail" prefHeight="43.0" prefWidth="122.0" style="-fx-background-color: #fcfcfc;" text="Envoyez mail" textFill="#0d82ff">
+                     <font>
+                        <Font name="Arial Bold" size="11.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="lblLoginMail" layoutX="39.0" layoutY="81.0" prefHeight="26.0" prefWidth="255.0" promptText="Entrez votre login" />
+                  <TextField fx:id="lblCodeMail" layoutX="35.0" layoutY="205.0" prefHeight="26.0" prefWidth="255.0" promptText="Code" />
+                  <Button fx:id="verifier" layoutX="208.0" layoutY="240.0" mnemonicParsing="false" onAction="#comparerCode" style="-fx-background-color: #fcfcfc;" text="Vérifier code" textFill="#f40e0e">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

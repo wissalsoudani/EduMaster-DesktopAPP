@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AjouterController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="512.4" prefWidth="610.0" style="-fx-background-color: #4E85DD;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="153.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="153.0" fitWidth="200.0" layoutY="31.0">
+                     <image>
+                        <Image url="@assests/couverture/Logo-edumaster.png" />
+                     </image>
+                     <effect>
+                        <DropShadow spread="0.39">
+                           <color>
+                              <Color red="0.09005848318338394" green="0.21914230287075043" blue="0.4421052634716034" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="246.0" layoutY="26.0" prefHeight="358.0" prefWidth="326.0" style="-fx-background-color: #FCFCFC; -fx-background-radius: 20px;">
+               <effect>
+                  <DropShadow spread="0.38">
+                     <color>
+                        <Color red="0.25789472460746765" green="0.26508772373199463" blue="0.4736842215061188" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <TextField fx:id="lblLogin" layoutX="25.0" layoutY="68.0" prefHeight="26.0" prefWidth="108.0" promptText="Login" />
+                  <TextField fx:id="lblMdp" layoutX="25.0" layoutY="117.0" prefHeight="26.0" prefWidth="266.0" promptText="Mot de passe" />
+                  <TextField fx:id="lblNom" layoutX="25.0" layoutY="169.0" prefHeight="26.0" prefWidth="266.0" promptText="Nom" />
+                  <TextField fx:id="lblPrenom" layoutX="25.0" layoutY="221.0" prefHeight="26.0" prefWidth="266.0" promptText="Prenom" />
+                  <TextField fx:id="lblNiveau" layoutX="25.0" layoutY="271.0" prefHeight="26.0" prefWidth="58.0" promptText="Niveau" />
+                  <TextField fx:id="lblMail" layoutX="99.0" layoutY="271.0" prefHeight="26.0" prefWidth="194.0" promptText="Mail" />
+                  <Button fx:id="btnInscrire" layoutX="198.0" layoutY="309.0" mnemonicParsing="false" onAction="#btnInscrire" prefHeight="31.0" prefWidth="99.0" style="-fx-background-color: #fcfcfc;" text="M'inscrire" textFill="#0d82ff">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <ChoiceBox fx:id="typecombo" layoutX="154.0" layoutY="66.0" prefHeight="26.0" prefWidth="136.0" style="-fx-background-color: #4E85DD;" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="553.0" prefWidth="658.0" style="-fx-background-color: #75BEB7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.DetailsHistoireController">
+   <children>
+      <ScrollPane fx:id="contenu" layoutX="17.0" layoutY="136.0" prefHeight="410.0" prefWidth="572.0" style="-fx-background-color: grey;">
+         <content>
+            <Text fx:id="text" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="567.21630859375" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="nomHistoire" layoutX="222.0" layoutY="14.0" prefHeight="23.0" prefWidth="125.0" text="Nom Histoire" textFill="#15115b">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font></Label>
+      <ImageView fx:id="couverture" fitHeight="126.0" fitWidth="200.0" layoutX="17.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="categorie" alignment="CENTER" layoutX="403.0" layoutY="110.0" prefHeight="17.0" prefWidth="84.0" text="Categorie" textFill="#15115b">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font></Label>
+      <Label fx:id="age" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="544.0" layoutY="108.0" prefHeight="17.0" prefWidth="35.0" text="Age" textFill="#15115b">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font></Label>
+      <Label layoutX="580.0" layoutY="109.0" text="ANS" textFill="#15115b">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="320.0" layoutY="108.0" text="Categorie:" textFill="#15115b">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

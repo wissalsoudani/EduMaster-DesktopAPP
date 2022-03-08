@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="837.0" prefWidth="1171.0" style="-fx-background-color: ECE8DB;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.EduMasVideoController">
+   <children>
+      <Label layoutX="39.0" layoutY="67.0" text="NOM_VIDEO" textFill="#105b83">
+         <font>
+            <Font name="Bauhaus 93" size="21.0" />
+         </font></Label>
+      <Label fx:id="Label2" layoutX="269.0" layoutY="67.0" prefHeight="21.0" prefWidth="275.0" text="DATE PUBLICATION" textFill="#105b83">
+         <font>
+            <Font name="Bauhaus 93" size="21.0" />
+         </font></Label>
+      <Label layoutX="647.0" layoutY="67.0" text="DESCRIPTION" textFill="#105b83">
+         <font>
+            <Font name="Bauhaus 93" size="21.0" />
+         </font></Label>
+      <Label layoutX="982.0" layoutY="67.0" text="DUREE" textFill="#105b83">
+         <font>
+            <Font name="Bauhaus 93" size="21.0" />
+         </font></Label>
+      <TextField fx:id="tfNOMV" layoutX="15.0" layoutY="109.0" style="-fx-background-color: dab894; -fx-background-radius: 60;" />
+      <TextField fx:id="tfDATE" layoutX="312.0" layoutY="109.0" style="-fx-background-color: dab894; -fx-background-radius: 60;" />
+      <TextField fx:id="tfDESC" layoutX="616.0" layoutY="109.0" style="-fx-background-color: dab894; -fx-background-radius: 60;" />
+      <TextField fx:id="tfD" layoutX="922.0" layoutY="109.0" style="-fx-background-color: dab894; -fx-background-radius: 60;" />
+      <ListView fx:id="listV" layoutX="30.0" layoutY="187.0" prefHeight="496.0" prefWidth="485.0" style="-fx-background-color: 8cb596; -fx-background-radius: 20;" />
+      <Button fx:id="btnAjouter" layoutX="39.0" layoutY="694.0" mnemonicParsing="false" onAction="#AjouterVideo" style="-fx-background-color: f9efc7; -fx-background-radius: 90;" text="AJOUTER" textFill="#1c502a">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font></Button>
+      <Button fx:id="btnSuppV" layoutX="902.0" layoutY="792.0" mnemonicParsing="false" onAction="#SupprimerVideo" style="-fx-background-color: f9efc7; -fx-background-radius: 90;" text="SUPPRIMER" textFill="#598ba4">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font></Button>
+      <DatePicker fx:id="DatePicker" layoutX="304.0" layoutY="14.0" onAction="#getPublication" promptText="DATE " style="-fx-background-color: grey;" />
+      <StackPane fx:id="StackPane" layoutX="534.0" layoutY="187.0" prefHeight="400.0" prefWidth="625.0">
+         <children>
+            <MediaView fx:id="View" fitHeight="400.0" fitWidth="600.0" />
+         </children>
+      </StackPane>
+      <VBox layoutX="536.0" layoutY="587.0" prefHeight="200.0" prefWidth="615.0">
+         <children>
+            <Slider fx:id="slider" prefHeight="42.0" prefWidth="615.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="file" mnemonicParsing="false" onAction="#ChooseFile" style="-fx-background-color: grey;" text="Choisir Fichier">
+                     <font>
+                        <Font name="Algerian" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="play" mnemonicParsing="false" onAction="#playVideo" style="-fx-background-color: grey;" text="JOUER">
+                     <font>
+                        <Font name="Algerian" size="15.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#PauseVideo" style="-fx-background-color: grey;" text="Pause">
+                     <font>
+                        <Font name="Algerian" size="15.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#stopVideo" style="-fx-background-color: grey;" text="stop">
+                     <font>
+                        <Font name="Algerian" size="15.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#slow" style="-fx-background-color: grey;" text="&lt;&lt;&lt;">
+                     <font>
+                        <Font name="Algerian" size="15.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#minus" style="-fx-background-color: grey;" text="-5sec">
+                     <font>
+                        <Font name="Algerian" size="15.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#plus" style="-fx-background-color: grey;" text="+5sec">
+                     <font>
+                        <Font name="Algerian" size="15.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#speed" style="-fx-background-color: grey;" text="&gt;&gt;&gt;">
+                     <font>
+                        <Font name="Algerian" size="15.0" />
+                     </font></Button>
+                  <Slider fx:id="volumeSlider" prefHeight="18.0" prefWidth="63.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="btnvid" layoutX="1040.0" layoutY="792.0" mnemonicParsing="false" onAction="#VisiterVideo" prefHeight="31.0" prefWidth="133.0" style="-fx-background-color: #598ba4;" text="Voir Videos">
+         <font>
+            <Font name="Algerian" size="15.0" />
+         </font></Button>
+      <Button fx:id="btnajout" layoutX="21.0" layoutY="792.0" mnemonicParsing="false" onAction="#RevenirCours" prefHeight="31.0" prefWidth="224.0" style="-fx-background-color: blue;" text="&lt; AJOUT  COURS PAR ICI" textFill="#a19c9c">
+         <font>
+            <Font name="Bauhaus 93" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

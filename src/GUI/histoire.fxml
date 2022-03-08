@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="115.0" prefWidth="446.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.HistoireController">
+   <children>
+      <HBox layoutY="3.0" prefHeight="81.0" prefWidth="440.0">
+         <children>
+            <ImageView fx:id="cov_histoire" fitHeight="101.0" fitWidth="149.0" layoutY="1.0" pickOnBounds="true">
+               <image>
+                  <Image url="@assests/couverture/doingmychores.jpg" />
+               </image>
+               <HBox.margin>
+                  <Insets left="10.0" top="6.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label fx:id="nom_histoire" alignment="CENTER" prefHeight="105.0" prefWidth="120.0" text="Label" textAlignment="CENTER" textFill="#121f54">
+               <font>
+                  <Font name="Bauhaus 93" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Button fx:id="detailsbutton" mnemonicParsing="false" onAction="#details" prefHeight="32.0" prefWidth="84.0" style="-fx-background-radius: 90; -fx-background-color: #ffdfd3;" text="Details" textFill="#6b6b6b">
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Forte" size="17.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#test" prefHeight="32.0" prefWidth="57.0" style="-fx-background-radius: 90; -fx-background-color: #ffdfd3;" text="Test" textFill="#6b6b6b">
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Forte" size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
